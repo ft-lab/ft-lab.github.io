@@ -37,3 +37,20 @@ div.indent1 {
 div.indent2 {
   padding: 8px 8px 8px 20px;
 }
+
+table {
+  border-collapse: collapse;
+  border: 2px solid gray;
+  margin: 12px 12px 12px 12px;
+}
+
+th {
+  border: 2px solid gray;
+  padding: 8px 18px 8px 18px;
+  background-color: #b0b0b0;
+}
+
+td {
+  border: 2px solid gray;
+  padding: 8px 18px 8px 18px;
+}

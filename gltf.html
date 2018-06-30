@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>ft-lab プロジェクトファイル置き場</title>
+</head>
+
+<body class="l_white">
+	<h2>ft-lab プロジェクトファイル置き場</h2>
+	<div align="right">2018/06/30 Update.</div>
+	<hr />
+
+	<h3 class="section">glTFファイル</h3>
+	<div class="indent1">
+		glTF Converter for Shade3D (<a href="https://github.com/ft-lab/Shade3D_GLTFConverter" target="_blank">https://github.com/ft-lab/Shade3D_GLTFConverter</a>) のサンプルと<br>
+		glb形式で出力したファイルです。<br>
+		キャプチャ画像は「glTF Viewer」(<a href="https://gltf-viewer.donmccurdy.com/" target="_blank">https://gltf-viewer.donmccurdy.com/</a>)を使用しています。<br>
+
+		ライセンスは<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0</a> としています。<br>
+		ご自由にお使いくださいませ。<br>
+		<table border=1>
+			<tr>
+				<th>形状名</th>
+				<th>Shade3Dのファイル</th>
+				<th>glbファイル</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>Apple</td>
+				<td><a href="./gltf/apple/apple.shd">apple.shd</a></td>
+				<td><a href="./gltf/apple/apple.glb">apple.glb</a></td>
+				<td>リンゴの形状。<br>
+					頂点カラーを使用。<br>
+					<img src="images/gltf/apple_img.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td>Apple cut</td>
+				<td><a href="./gltf/apple/apple_cut.shd">apple_cut.shd</a></td>
+				<td><a href="./gltf/apple/apple_cut.glb">apple_cut.glb</a></td>
+				<td>リンゴを半分に切った形状。<br>
+					フェイスグループ（1メッシュに複数のマスターサーフェス（マテリアル）割り当て）を使用。<br>
+					<img src="images/gltf/apple_cut_img.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td>Dish</td>
+				<td><a href="./gltf/dish/dish.shd">dish.shd</a></td>
+				<td><a href="./gltf/dish/dish.glb">dish.glb</a></td>
+				<td>皿の形状。<br>
+					テクスチャイメージを使用しない。<br>
+					<img src="images/gltf/dish_img.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td>Fork</td>
+				<td><a href="./gltf/fork/fork.shd">fork.shd</a></td>
+				<td><a href="./gltf/fork/fork.glb">fork.glb</a></td>
+				<td>フォークの形状。<br>
+					金属の反射表現。<br>
+					OpenSubdivの使用。<br>
+					<img src="images/gltf/fork_img.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td>Cyawan</td>
+				<td><a href="./gltf/cyawan/cyawan.shd">cyawan.shd</a></td>
+				<td><a href="./gltf/cyawan/cyawan.glb">cyawan.glb</a></td>
+				<td>曜変天目茶碗（風)の形状。<br>
+					Substance Painterから出力したglbをShade3Dにインポートしたもの。<br>
+					Occlusion/Roughness/Metallicが1テクスチャにパックされている。<br>
+					<img src="images/gltf/cyawan_img.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td>Grass</td>
+				<td><a href="./gltf/grass/grass.shd">grass.shd</a></td>
+				<td><a href="./gltf/grass/grass.glb">grass.glb</a></td>
+				<td>草の形状。<br>
+					頂点カラーを使用。<br>
+					マテリアルとしてDoubleSidedを使用。<br>
+					拡散反射のマッピングレイヤで「アルファ透明」を使用(glTFのALPHA_MASK/alpha cutoffを使用)。<br>
+					<img src="images/gltf/grass_img.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td>Rocks and trees and grass</td>
+				<td><a href="./gltf/grass/rocks_trees_ao.shd">rocks_trees_ao.shd</a></td>
+				<td><a href="./gltf/grass/rocks_trees_ao.glb">rocks_trees_ao.glb</a></td>
+				<td>木と岩と草のシーン。<br>
+					複数のテクスチャイメージと形状を使用。<br>
+					頂点カラーを使用。<br>
+					マテリアルとしてDoubleSidedを使用。<br>
+					拡散反射のマッピングレイヤで「アルファ透明」を使用(glTFのALPHA_MASK/alpha cutoffを使用)。<br>
+					<img src="images/gltf/rocks_trees_ao.jpg" />
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<hr />
+	<a href="./index.html">トップページに戻る</a>
+	<hr />
+</body>
+</html>
+
