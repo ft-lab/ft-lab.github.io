@@ -8,7 +8,7 @@
 
 <body class="l_white">
 	<h2>ft-lab プロジェクトファイル置き場</h2>
-	<div align="right">2018/07/15 Update.</div>
+	<div align="right">2018/07/19 Update.</div>
 	<hr />
 
 	<h3 class="section">glTFファイル</h3>
@@ -143,10 +143,24 @@
 					複数のテクスチャイメージと形状を使用。<br>
 					頂点カラーを使用。<br>
 					マテリアルとしてDoubleSidedを使用。<br>
-					拡散反射のマッピングレイヤで「アルファ透明」を使用(glTFのALPHA_MASK/alpha cutoffを使用)。<br>
+					拡散反射のマッピングレイヤで「アルファ透明」を使用(glTFのalphaModeでALPHA_MASK/alpha cutoffを使用)。<br>
 					<img src="images/gltf/occlusion_leaves_img.jpg" />
 				</td>
 			</tr>
+			<tr>
+				<td>lodge<br>2018/07/19</td>
+				<td><a href="./gltf/lodge/lodge.shd">lodge.shd</a></td>
+				<td><a href="./gltf/lodge/lodge.glb">lodge.glb</a></td>
+				<td>AO MapをOcclusionのテクスチャとして、地面と建物に割り当て。<br>
+					建物で2つのUV情報を保持、AO MapでUV2を使用。<br>
+					複数のテクスチャイメージと形状を使用。<br>
+					表面材質で「透明」を使用(glTFのalphaModeでBLENDを使用、pbrMetallicRoughness-baseColorFactorでAlpha要素を使用)。<br>
+					<img src="images/gltf/lodge_img.jpg" /><br>
+					「glTF Viewer」では、Direct Intensityを0に、Ambient Intensityを0.8など大きめの値にしてください。<br>
+					（影の表現がないため、Occlusionの確認はデフォルトでわかりにくいため）
+				</td>
+			</tr>
+
 		</table>
 	</div>
 
