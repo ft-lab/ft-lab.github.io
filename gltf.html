@@ -27,22 +27,58 @@
 				<th>説明</th>
 			</tr>
 			<tr>
-				<td>Apple<br>2018/06/30</td>
+				<td>Apple<br>2018/06/30<br>Update : 2018/10/07.</td>
 				<td><a href="./gltf/apple/apple.shd">apple.shd</a></td>
-				<td><a href="./gltf/apple/apple.glb">apple.glb</a></td>
+				<td><a href="./gltf/apple/apple.glb">apple.glb (110KB)</a><br><br>
+
+					<a href="./gltf/apple/apple_draco_no_vertexColor.glb">apple_draco_no_vertexColor.glb (89KB)</a><br>
+					<a href="./gltf/apple/apple_draco.glb">apple_draco.glb (90KB)</a><br>
+				</td>
 				<td>リンゴの形状。<br>
 					頂点カラーを使用。<br>
+					1Meshに1Primitive。<br>
 					マテリアルとしてDoubleSidedを使用。<br>
-					<img src="images/gltf/apple_img.jpg" />
+					<img src="images/gltf/apple_img.jpg" /><br>
+					<hr />
+					[apple.glb]<br>
+					未圧縮 : 110KB<br><br>
+
+					[apple_draco_no_vertexColor.glb]<br>
+					Draco圧縮 + 頂点カラー未使用 : 89KB<br><br>
+
+					[apple_draco.glb]<br>
+					Draco圧縮 + 頂点カラー使用 : 90KB<br>
 				</td>
 			</tr>
 			<tr>
-				<td>Apple cut<br>2018/06/30</td>
+				<td>Apple cut<br>2018/06/30<br>Update : 2018/10/07.</td>
 				<td><a href="./gltf/apple/apple_cut.shd">apple_cut.shd</a></td>
-				<td><a href="./gltf/apple/apple_cut.glb">apple_cut.glb</a></td>
+				<td>
+					<a href="./gltf/apple/apple_cut.glb">apple_cut.glb (58.1KB)</a><br>
+					<a href="./gltf/apple/apple_cut_draco.glb">apple_cut_draco.glb (49.0KB)</a><br><br>
+
+					<a href="./gltf/apple/apple_cut_vert_share.glb">apple_cut_vert_share.glb (57.6KB)</a><br>
+					<a href="./gltf/apple/apple_cut_vert_share_draco.glb">apple_cut_vert_share_draco.glb (48.5KB)</a><br>
+				</td>
+				
 				<td>リンゴを半分に切った形状。<br>
 					フェイスグループ（1メッシュに複数のマスターサーフェス（マテリアル）割り当て）を使用。<br>
-					<img src="images/gltf/apple_cut_img.jpg" />
+					<img src="images/gltf/apple_cut_img.jpg" /><br>
+
+					<hr />
+					[apple_cut.glb]<br>
+					未圧縮 : 58.1KB<br><br>
+
+					[apple_cut_draco.glb]<br>
+					Draco圧縮 : 49.0KB<br>
+					<hr />
+
+					<h3>「Mesh内のPrimitiveの頂点情報を共有」をオン</h3>
+					1Mesh内の複数Primitivesにて、頂点情報（頂点座標/法線/UV）を共有して使用。<br><br>
+					[apple_cut_vert_share.glb]<br>
+					未圧縮 : 57.6KB<br><br>
+					[apple_cut_vert_share_draco.glb]<br>
+					Draco圧縮 : 48.5KB<br>
 				</td>
 			</tr>
 			<tr>
