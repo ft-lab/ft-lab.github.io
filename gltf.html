@@ -8,7 +8,7 @@
 
 <body class="l_white">
 	<h2>ft-lab プロジェクトファイル置き場</h2>
-	<div align="right">2018/10/07 Update.</div>
+	<div align="right">2018/10/12 Update.</div>
 	<hr />
 
 	<h3 class="section">glTFファイル</h3>
@@ -275,7 +275,7 @@
 					<a href="./gltf/MorphTargets/face_test_vert_share.glb">face_test_vert_share.glb (77.6KB)</a><br>
 					<a href="./gltf/MorphTargets/face_test_vert_share_draco.glb">face_test_vert_share_draco.glb (69.6KB)</a><br><br>
 				</td>
-				<td>Morph Targets/「Mesh内のPrimitiveの頂点情報を共有」の検証用。<br>
+				<td>Morph Targets/「Mesh内のPrimitiveの頂点情報を共有」/Draco圧縮の検証用。<br>
 					１Meshに2Primitives。<br>
 					2つのテクスチャイメージ使用。<br>
 					Morph Targetsの割り当て。<br><br>
@@ -296,12 +296,43 @@
 					Draco圧縮 : 63.5KB<br>
 					<hr />
 
-					<h3>「Mesh内のPrimitiveの頂点情報を共有」をオン</h3>
+					<h3>「Mesh内のPrimitiveの頂点情報を共有」 On</h3>
 					1Mesh内の複数Primitivesにて、頂点情報（頂点座標/法線/UV）を共有して使用。<br><br>
 					[face_test_vert_share.glb]<br>
 					未圧縮 : 77.6KB<br><br>
 					[face_test_vert_share_draco.glb]<br>
 					Draco圧縮 : 69.6KB<br>
+				</td>
+			</tr>
+			<tr>
+				<td>multiplePrimitives<br>2018/10/12</td>
+				<td><a href="./gltf/MorphTargets/multiplePrimitives.shd">multiplePrimitives.shd</a></td>
+				<td>
+					<a href="./gltf/MorphTargets/multiplePrimitives.glb">multiplePrimitives.glb (52.3KB)</a><br>
+					<a href="./gltf/MorphTargets/multiplePrimitives_draco.glb">multiplePrimitives_draco.glb (51.7KB)</a><br><br>
+
+					<a href="./gltf/MorphTargets/multiplePrimitives_vert_share.glb">multiplePrimitives_vert_share.glb (51.6KB)</a><br>
+					<a href="./gltf/MorphTargets/multiplePrimitives_vert_share_draco.glb">multiplePrimitives_vert_share_draco.glb (51.4KB)</a><br>
+				</td>
+				<td>Morph Targets/「Mesh内のPrimitiveの頂点情報を共有」/Draco圧縮の検証用。<br>
+					１Meshに2Primitives。<br>
+					1つのテクスチャイメージ使用。<br>
+					Morph Targetsの割り当て。デフォルトでWeight値を0.5として指定。<br><br>
+					
+					<img src="images/gltf/multiplePrimitives_img.jpg" /><br><br>
+	
+					<h3>「Mesh内のPrimitiveの頂点情報を共有」 Off</h3>
+					[multiplePrimitives.glb]<br>
+					未圧縮 : 52.3KB<br><br>
+					[multiplePrimitives_draco.glb]<br>
+					Draco圧縮 : 51.7KB<br>
+					<hr />
+
+					<h3>「Mesh内のPrimitiveの頂点情報を共有」 On</h3>
+					[multiplePrimitives_vert_share.glb]<br>
+					未圧縮 : 51.6KB<br><br>
+					[multiplePrimitives_vert_share_draco.glb]<br>
+					Draco圧縮 : 51.4KB<br>
 				</td>
 			</tr>
 
