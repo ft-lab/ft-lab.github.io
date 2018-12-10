@@ -5,16 +5,9 @@
 
 <script>
 
-/**
- * 指定の要素をフルスクリーン表示.
- */
-function doFullScreen (target)
+function doWebVR (url)
 {
-	if (target.webkitRequestFullScreen) {
-		target.webkitRequestFullScreen();
-	} else if (target.mozRequestFullScreen) {
-		target.mozRequestFullScreen();
-	}	
+	location.href = "./show_webvr.html?image=" + url;
 }
 </script>
 
@@ -23,16 +16,13 @@ function doFullScreen (target)
 
 <body class="l_white">
 	<h2>パノラマVR表示の検証</h2>
-	<div align="right">2018/12/04 Update.</div>
+	<div align="right">2018/12/10 Update.</div>
 	<hr />
 	パノラマVR画像の表示検証用です。<br><br>
-	Oculus Goの標準ブラウザの場合、下記のサムネイルをクリックしての「180 3D(左右)」表示は正しく動作しないため、<br>
-	ダウンロードしてご確認ください。<br>
-	Firefox Reality 1.1では極部分は円状の模様が出ますが、立体視表示は出来ているようです。<br>
-	また、ブラウザ内での全画面表示では標準ブラウザ/Firefox Realityともに解像度が粗いままになります。<br>
+	下記のサムネイルをクリックすると、WebVRの画面が表示されます。<br>
 	
 	<h3 class="section">Shade3DでのパノラマVRレンダリング</h3>
-	<div align="right">2018/12/04 Update.</div>
+	<div align="right">2018/12/10 Update.</div>
 	<div class="indent1">
 		<table border="0">
 			<tr>
@@ -53,20 +43,14 @@ function doFullScreen (target)
 			</tr>
 		</table>
 		<br>
-		レンダリング画像をTop and Bottomから180度の範囲にトリミングし、SBSにそろえなおしました。<br>
-		<br>
 		立体視の場合、HMDを上下に傾けると凹みがあるように見えます。<br>
-
-		<br>
-		以下をクリックすると全画面表示になります。<br>
-		Oculus Goの場合「180 3D(左右)」にすると立体視できます。<br>
-		<br>
-		<img src="./images/shade3d_180_SBS_4096x2048.jpg" width="700" height="350" onClick="doFullScreen(this);" /><br>
-		<a href="./images/shade3d_180_SBS_4096x2048.jpg" download="shade3d_180_SBS_4096x2048.jpg">Download</a>
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/shade3d_TB_4096x4096_thumb.jpg" onClick="doWebVR('images/shade3d_TB_4096x4096.jpg');" /><br>
+		<a href="./images/shade3d_TB_4096x4096.jpg" download="shade3d_TB_4096x4096.jpg">Download</a>
 	</div>
 
 	<h3 class="section">Octane(Unity)でのパノラマVRレンダリング</h3>
-	<div align="right">2018/12/04 Update.</div>
+	<div align="right">2018/12/10 Update.</div>
 	<div class="indent1">
 		<table border="0">
 			<tr>
@@ -79,7 +63,9 @@ function doFullScreen (target)
 			</tr>
 			<tr>
 				<th>Panorama</th>
-				<td>Panoramic camera - Spherical (equirectangular)</td>
+				<td>Panoramic camera - Spherical (equirectangular)<br>
+					Top and Bottom
+				</td>
 			</tr>
 			<tr>
 				<th>IPD</th>
@@ -87,16 +73,43 @@ function doFullScreen (target)
 			</tr>
 		</table>
 		<br>
-		レンダリング画像をTop and Bottomから180度の範囲にトリミングし、SBSにそろえなおしました。<br>
+		立体視の場合、HMDを上下に傾けると凹みがあるように見えます。<br>
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/octane4_TB_4096x4096_thumb.jpg" onClick="doWebVR('images/octane4_TB_4096x4096.jpg');" /><br>
+		<a href="./images/octane4_TB_4096x4096.jpg" download="octane4_TB_4096x4096.jpg">Download</a>
+	</div>
+
+	<h3 class="section">Unity 2018(ODS : Google’s Omni-directional Stereo)のパノラマVRレンダリング</h3>
+	<div align="right">2018/12/10 Update.</div>
+	<div class="indent1">
+		参考 : <a href="https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/">https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/</a><br>
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Unity 2018.2</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>4096 x 4096 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>equirectangular<br>
+					Top and Bottom
+				</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
 		<br>
 		立体視の場合、HMDを上下に傾けると凹みがあるように見えます。<br>
-
-		<br>
-		以下をクリックすると全画面表示になります。<br>
-		Oculus Goの場合「180 3D(左右)」にすると立体視できます。<br>
-		<img src="./images/octane4_180_SBS_4096x2048.jpg" width="700" height="350" onClick="doFullScreen(this);" /><br>
-		<a href="./images/octane4_180_SBS_4096x2048.jpg" download="octane4_180_SBS_4096x2048.jpg">Download</a>
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/Unity_TB_4096x4096_thumb.jpg" onClick="doWebVR('images/Unity_TB_4096x4096.jpg');" /><br>
+		<a href="./images/Unity_TB_4096x4096.jpg" download="Unity_TB_4096x4096.jpg">Download</a>
 	</div>
+
 	<hr />
 </body>
 </html>
