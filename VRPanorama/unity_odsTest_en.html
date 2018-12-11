@@ -11,22 +11,21 @@ function doWebVR (url)
 }
 </script>
 
-<title>UnityのODSの検証</title>
+<title>Unity's ODS Test</title>
 </head>
 
 <body class="l_white">
-	<h2>UnityのODSの検証</h2>
+	<h2>Unity's ODS Test</h2>
 	<div align="right">2018/12/11 Update.</div>
 	<hr />
-	The English page is <a href="unity_odsTest_en.html">unity_odsTest_en.html</a>.<br><br>
 
-	UnityのODS(Google’s Omni-directional Stereo)でのパノラマVR画像の表示検証用です。<br>
-	参考 : <a href="https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/">https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/</a><br><br>
+	It is for testing panoramic VR images on Unity's ODS (Google's Omni-directional Stereo).<br>
+	Reference : <a href="https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/">https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/</a><br><br>
 
-	以下のようなシーンサイズになっています。<br>
+	The scene size is as follows.<br>
 	<img src="images/room_scene/room_size.jpg" /><br>
-	このシーンで、カメラ位置を変えたときの立体視の見え方を検証します。<br>
-	下記のサムネイルをクリックすると、WebVRの画面が表示されます。<br>
+	This scene will verify the appearance of stereoscopic viewing when changing the camera position.<br>
+	Click on the thumbnail below, the WebVR screen will be displayed.<br>
 
 	<table border="0">
 		<tr>
@@ -55,7 +54,7 @@ function doWebVR (url)
 		</tr>
 	</table>
 
-	<h3 class="section">カメラの高さを変えてレンダリング</h3>
+	<h3 class="section">Render with different camera height</h3>
 	<div align="right">2018/12/11 Update.</div>
 	<div class="indent1">
 		<table border="0">
@@ -98,14 +97,15 @@ function doWebVR (url)
 	</div>
 	<hr />
 	<div class="indent1">
-		高さを変えても、部屋のサイズは実際よりも大きく見え、球の接地感も弱い。<br>
+			Even changing the height, the size of the room appears bigger than it actually is,<br>
+			and the sense of grounding of the sphere is weak.<br>
 	</div>
 	<hr />
 
-	<h3 class="section">カメラのZ位置を変えてレンダリング</h3>
+	<h3 class="section">Render by changing the Z position of the camera</h3>
 	<div align="right">2018/12/11 Update.</div>
 	<div class="indent1">
-		カメラを引いていった場合の検証。<br>
+		Validation when lowering the camera.<br>
 		<table border="0">
 			<tr>
 				<th>Camera Y</th>
@@ -150,7 +150,8 @@ function doWebVR (url)
 		<img src="./images/room_scene/Unity_TB_4096x4096_z_06_thumb.jpg" onClick="doWebVR('images/room_scene/Unity_TB_4096x4096_z_06.jpg');" /><br>
 	</div>
 	<hr />
-	カメラが被写体から遠ざかるとゆがみは緩和されるが、球の接地感は変わらず。<br>
+	When the camera moves away from the subject, the distortion is alleviated,<br>
+	but the sense of grounding of the sphere does not change.<br>
 	<hr />
 </body>
 </html>
