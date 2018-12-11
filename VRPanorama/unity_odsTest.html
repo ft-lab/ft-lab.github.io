@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script>
+
+function doWebVR (url)
+{
+	location.href = "./show_webvr.html?image=" + url;
+}
+</script>
+
+<title>UnityのODSの検証</title>
+</head>
+
+<body class="l_white">
+	<h2>UnityのODSの検証</h2>
+	<div align="right">2018/12/11 Update.</div>
+	<hr />
+	The English page is <a href="unity_ods_en.html">unity_ods_en.html</a>.<br><br>
+
+	UnityのODS(Google’s Omni-directional Stereo)でのパノラマVR画像の表示検証用です。<br>
+	参考 : <a href="https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/">https://blogs.unity3d.com/jp/2018/01/26/stereo-360-image-and-video-capture/</a><br><br>
+
+	以下のようなシーンサイズになっています。<br>
+	<img src="images/room_scene/room_size.jpg" /><br>
+	このシーンで、カメラ位置を変えたときの立体視の見え方を検証します。<br>
+	下記のサムネイルをクリックすると、WebVRの画面が表示されます。<br>
+
+	<table border="0">
+		<tr>
+			<th>Rendering</th>
+			<td>Unity 2018.2.18f1</td>
+		</tr>
+		<tr>
+			<th>Resolution</th>
+			<td>4096 x 4096 pixel</td>
+		</tr>
+		<tr>
+			<th>Panorama</th>
+			<td>equirectangular<br>
+				Top and Bottom
+			</td>
+		</tr>
+		<tr>
+			<th>IPD</th>
+			<td>64mm</td>
+		</tr>
+	</table>
+
+	<h3 class="section">カメラの高さを変えてレンダリング</h3>
+	<div align="right">2018/12/11 Update.</div>
+	<div class="indent1">
+		<table border="0">
+			<tr>
+				<th>Camera Y</th>
+				<td>0.25 m</td>
+			</tr>
+		</table>
+		<img src="./images/room_scene/Unity_TB_4096x4096_y_025_thumb.jpg" onClick="doWebVR('images/room_scene/Unity_TB_4096x4096_y_025.jpg');" /><br>
+	</div>
+	<hr />
+	<div class="indent1">
+		<table border="0">
+			<tr>
+				<th>Camera Y</th>
+				<td>0.5 m</td>
+			</tr>
+		</table>
+		<img src="./images/Unity_TB_4096x4096_thumb.jpg" onClick="doWebVR('images/Unity_TB_4096x4096.jpg');" /><br>
+	</div>
+	<hr />
+	<div class="indent1">
+		<table border="0">
+			<tr>
+				<th>Camera Y</th>
+				<td>0.75 m</td>
+			</tr>
+		</table>
+		<img src="./images/room_scene/Unity_TB_4096x4096_y_075_thumb.jpg" onClick="doWebVR('images/room_scene/Unity_TB_4096x4096_y_075.jpg');" /><br>
+	</div>
+	<hr />
+</body>
+</html>
