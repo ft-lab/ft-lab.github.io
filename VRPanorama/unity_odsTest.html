@@ -55,6 +55,69 @@ function doWebVR (url)
 		</tr>
 	</table>
 
+	<h3 class="section">レンダリングのスクリプト</h3>
+	<div class="indent1">
+		CameraRendering.cs<br>
+		<pre><code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+using System.IO;
+				
+[RequireComponent(typeof(Camera))]
+public class CameraRendering : MonoBehaviour {
+	public RenderTexture cubemap_left;
+	public RenderTexture cubemap_right;
+	public RenderTexture equirect;
+				
+	public float stereoSeparation = 0.064f;		// IPD.
+				
+	private bool m_firstF = true;
+				
+	// Use this for initialization
+	void Start () {
+		Camera camera = this.GetComponent&lt;Camera&gt;();
+		camera.stereoSeparation = stereoSeparation; // Eye separation (IPD) of 64mm.
+	}
+					
+	// Update is called once per frame
+	void Update () {
+		if (cubemap_left == null || cubemap_right == null) return;
+				
+		// RenderTexture (cube) Rendering.
+		Camera camera = this.GetComponent&lt;Camera&gt;();
+		camera.RenderToCubemap(cubemap_left, 63, Camera.MonoOrStereoscopicEye.Left); 
+		camera.RenderToCubemap(cubemap_right, 63, Camera.MonoOrStereoscopicEye.Right); 
+				
+		// left and right cubemap to Equirecangular.
+		if (equirect == null) return;
+		cubemap_left.ConvertToEquirect(equirect, Camera.MonoOrStereoscopicEye.Left);
+		cubemap_right.ConvertToEquirect(equirect, Camera.MonoOrStereoscopicEye.Right);		
+				
+		if (m_firstF) {
+			m_firstF = false;
+			savePng();		// save png file.
+		}
+	}
+				
+	void savePng () {
+		if (equirect == null) return;
+		Texture2D tex = new Texture2D(equirect.width, equirect.height, TextureFormat.RGB24, false);
+		RenderTexture.active = equirect;
+		tex.ReadPixels(new Rect(0, 0, equirect.width, equirect.height), 0, 0);
+		tex.Apply();
+
+		byte[] bytes = tex.EncodeToPNG();
+		Object.Destroy(tex);
+				 
+		File.WriteAllBytes(Application.dataPath + "/../Unity_SavedScreen.png", bytes);
+	}	
+}
+	</code></pre>
+	</div>
+	<hr>
+
 	<h3 class="section">カメラの高さを変えてレンダリング</h3>
 	<div align="right">2018/12/11 Update.</div>
 	<div class="indent1">
