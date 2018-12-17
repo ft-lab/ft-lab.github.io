@@ -16,7 +16,7 @@ function doWebVR (url)
 
 <body class="l_white">
 	<h2>パノラマVR表示の検証</h2>
-	<div align="right">2018/12/10 Update.</div>
+	<div align="right">2018/12/18 Update.</div>
 	<hr />
 	The English page is <a href="index_en.html">index_en.html</a>.<br><br>
 
@@ -114,6 +114,39 @@ function doWebVR (url)
 		<br><br>
 		UnityのODSは<a href="./unity_odsTest.html">別途検証</a>。
 	</div>
+
+	<h3 class="section">Unity 2018で独自パノラマVRレンダリング</h3>
+	<div align="right">2018/12/18 Update.</div>
+	<div class="indent1">
+		ゆがみを極力補正中の独自方式です(WIP)。<br>
+
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Unity 2018.2</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>4096 x 4096 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>equirectangular<br>
+					Top and Bottom
+				</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+		<br>
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/my_room_scene/Unity_my_TB_4096x4096_thumb.jpg" onClick="doWebVR('images/my_room_scene/Unity_my_TB_4096x4096.jpg');" /><br>
+		<a href="./images/my_room_scene/Unity_my_TB_4096x4096.jpg" download="Unity_my_TB_4096x4096.jpg">Download</a>
+		<br><br>
+	</div>
+
 	<hr />
 </body>
 </html>
