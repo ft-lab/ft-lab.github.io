@@ -9,6 +9,11 @@ function doWebVR (url)
 {
 	location.href = "./show_webvr.html?image=" + url;
 }
+
+function doWebVR180 (url)
+{
+	location.href = "./show_webvr180_sbs.html?image=" + url;
+}
 </script>
 
 <title>Panorama VR test</title>
@@ -178,6 +183,33 @@ function doWebVR (url)
 		Click on below to display WebVR.<br>
 		<img src="./images/my_room_scene/Unity_my_TB_4096x4096_00_thumb.jpg" onClick="doWebVR('images/my_room_scene/Unity_my_TB_4096x4096_00.jpg');" /><br>
 		<a href="./images/my_room_scene/Unity_my_TB_4096x4096_00.jpg" download="Unity_my_TB_4096x4096_00.jpg">Download</a>
+		<br><br>
+
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Unity 2018.3</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>8192 x 4096 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>equirectangular(VR180)<br>
+					Side by Side
+				</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+		<br>
+
+		Click on below to display WebVR.<br>
+		<img src="./images/my_room_scene/Unity_my_SBS_180_8192x4096_thumb.jpg" onClick="doWebVR180('images/my_room_scene/Unity_my_SBS_180_8192x4096.jpg');" /><br>
+		<a href="./images/my_room_scene/Unity_my_SBS_180_8192x4096.jpg" download="Unity_my_SBS_180_8192x4096.jpg">Download</a>
 		<br><br>
 	</div>
 
