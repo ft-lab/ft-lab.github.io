@@ -21,7 +21,7 @@ function doWebVR180 (url)
 
 <body class="l_white">
 	<h2>Panorama VR test</h2>
-	<div align="right">2018/12/18 Update.</div>
+	<div align="right">2018/12/19 Update.</div>
 	<hr />
 	It is for verification of display of panorama VR image.<br><br>
 	Click on the thumbnail below, the WebVR screen will be displayed.<br>
@@ -119,44 +119,12 @@ function doWebVR180 (url)
 		Unity's ODS has been tested on the <a href="./unity_odsTest_en.html">next page</a>.
 	</div>
 
-	<h3 class="section">Original Panorama VR rendering with Unity 2018</h3>
+	<h3 class="section">Original Panorama VR rendering with Unity 2018 (like VR180 Camera)</h3>
 	<div align="right">2018/12/18 Update.</div>
 	<div class="indent1">
-			It is a proprietary method which is correcting distortion as much as possible (WIP).<br>
-		
-		<table border="0">
-			<tr>
-				<th>Rendering</th>
-				<td>Unity 2018.2</td>
-			</tr>
-			<tr>
-				<th>Resolution</th>
-				<td>4096 x 4096 pixel</td>
-			</tr>
-			<tr>
-				<th>Panorama</th>
-				<td>equirectangular<br>
-					Top and Bottom
-				</td>
-			</tr>
-			<tr>
-				<th>IPD</th>
-				<td>64mm</td>
-			</tr>
-		</table>
-		<br>
-		Click on below to display WebVR.<br>
-		<img src="./images/my_room_scene/Unity_my_TB_4096x4096_thumb.jpg" onClick="doWebVR('images/my_room_scene/Unity_my_TB_4096x4096.jpg');" /><br>
-		<a href="./images/my_room_scene/Unity_my_TB_4096x4096.jpg" download="Unity_my_TB_4096x4096.jpg">Download</a>
-		<br><br>
-	</div>
-
-	<hr />
-	<div class="indent1">
-		It is a proprietary method which is correcting distortion as much as possible (WIP).<br>
 		IPD is shifted only in +X/-X direction.<br>
 		When looking to the left and right, it seems to become big as there is no parallax.<br>
-		I think that there are a lot of this pattern of VR 180 photos.<br>
+		I think that there are a lot of this pattern of VR180 photos.<br>
 
 		<table border="0">
 			<tr>
@@ -212,6 +180,41 @@ function doWebVR180 (url)
 		<a href="./images/my_room_scene/Unity_my_SBS_180_8192x4096.jpg" download="Unity_my_SBS_180_8192x4096.jpg">Download</a>
 		<br><br>
 	</div>
+
+	<h3 class="section">Original Panorama VR rendering with Unity 2018</h3>
+	<div align="right">2018/12/19 Update.</div>
+	<div class="indent1">
+		It is a proprietary method which is correcting distortion as much as possible (WIP).<br>
+		In the -X/+X direction, the IPD is inclined so as to be perpendicular to the eye direction.<br>
+		The parallax of the boundary part is tight.<br>
+
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Unity 2018.3</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>4096 x 2048 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>equirectangular(VR180)<br>
+					Side by Side
+				</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+		<br>
+		Click on below to display WebVR.<br>
+		<img src="./images/my_room_scene/Unity_my_SBS_180_4096x2048_1219_thumb.jpg" onClick="doWebVR180('images/my_room_scene/Unity_my_SBS_180_4096x2048_1219.jpg');" /><br>
+		<a href="./images/my_room_scene/Unity_my_SBS_180_4096x2048_1219.jpg" download="Unity_my_SBS_180_4096x2048_1219.jpg">Download</a>
+		<br><br>
+	</div>
+
 
 	<hr />
 </body>
