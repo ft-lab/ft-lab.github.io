@@ -72,7 +72,7 @@
 				// 半球のglTFを読み込み.
 				loadGLTF(m_glTFURL);
 
-				renderer = new THREE.WebGLRenderer();
+				renderer = new THREE.WebGLRenderer({ antialias: true });
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.vr.enabled = true;
@@ -113,9 +113,9 @@
 			function setupBackgroundSphere () {
 				// パノラマ画像の読み込み.
 				texture = new THREE.Texture();
-				texture.generateMipmaps = false;
-				texture.minFilter = THREE.NearestFilter;
-				texture.maxFilter = THREE.NearestFilter;
+				texture.generateMipmaps = true;
+				texture.minFilter = THREE.LinearFilter;	//THREE.NearestFilter;
+				texture.maxFilter = THREE.LinearFilter;	//THREE.NearestFilter;
 				texture.format = THREE.RGBFormat;
 				var image = new Image();
 				image.onload = function () {
