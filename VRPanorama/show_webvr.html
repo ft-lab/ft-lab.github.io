@@ -65,8 +65,8 @@
 				// パノラマ画像の読み込み.
 				texture = new THREE.Texture();
 				texture.generateMipmaps = true;
-				texture.minFilter = THREE.NearestFilter;
-				texture.maxFilter = THREE.NearestFilter;
+				texture.minFilter = THREE.LinearFilter;	//THREE.NearestFilter;
+				texture.maxFilter = THREE.LinearFilter;	//THREE.NearestFilter;
 				texture.format = THREE.RGBFormat;
 				var image = new Image();
 				image.onload = function () {
@@ -110,7 +110,7 @@
 				mesh.layers.set( 2 ); // display in right eye only
 				scene.add( mesh );
 
-				renderer = new THREE.WebGLRenderer();
+				renderer = new THREE.WebGLRenderer({ antialias: true });
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.vr.enabled = true;
