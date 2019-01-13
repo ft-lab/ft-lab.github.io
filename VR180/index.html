@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>VR180 Render(仮) (Unityの開発中のAsset)のテストページ</title>
+
+</head>
+
+<body class="l_white">
+	<h2>VR180 Render(仮) (Unityの開発中のAsset)のテストページ</h2>
+	<div align="right">2019/01/13 Update.</div>
+	<hr />
+
+	<h3 class="section">動画 フレーム補間テスト</h3>
+	<div align="right">2019/01/13 Update.</div>
+	<div class="indent1">
+		Oculus GoのFirefoxのWebVRとして動画(mp4)を再生することができます。<br>
+		Oculus Goの標準ブラウザでは動作しません。<br><br>
+
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Unity 2018.3</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>4096 x 2048 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>VR180 / Side by Side</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+		左右を向いた場合の視差を考慮。<br><br>
+	
+		フレーム間の補間なし。<br>
+		カメラの平行移動でガタつく。<br>
+		<a href="https://ft-lab.jp/WebGL/vr180/show_webvr180_sbs_movie.html?image=movies/vr180_jroom_sbs_none_smooth.mp4">
+			<img src="images/vr180_jroom_sbs_thumb.jpg" />
+		</a><br>
+
+		フレーム間の補間あり。<br>
+		ブラーがかかってガタつきは緩和される。<br>
+		<a href="https://ft-lab.jp/WebGL/vr180/show_webvr180_sbs_movie.html?image=movies/vr180_jroom_sbs_smooth.mp4">
+			<img src="images/vr180_jroom_sbs_thumb.jpg" />
+		</a><br>
+	</div>
+	<hr />
+</body>
+</html>
+

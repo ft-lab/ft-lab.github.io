@@ -1,0 +1,56 @@
+body.l_white {
+  color: #000000;
+  background-color: #ece6e0;
+}
+
+hr.wood {
+  color: #927214;
+  background-color: #927214;
+  border-style: solid;
+  height: 2px;
+}
+
+a.link {
+  color: #724204;
+}
+a.link:hover {
+  color: #c00000;
+}
+
+h3.section {
+  font-size: large;
+  font-weight: bold;
+  color: #ece6e0;
+  background-color: #825432;
+  border: solid black;
+  border-left-width: 16px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  padding: 4px 4px 4px 10px;
+}
+
+div.indent1 {
+  padding: 4px 4px 4px 12px;
+}
+
+div.indent2 {
+  padding: 8px 8px 8px 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid gray;
+  margin: 12px 12px 12px 12px;
+}
+
+th {
+  border: 2px solid gray;
+  padding: 8px 18px 8px 18px;
+  background-color: #b0b0b0;
+}
+
+td {
+  border: 2px solid gray;
+  padding: 8px 18px 8px 18px;
+}
