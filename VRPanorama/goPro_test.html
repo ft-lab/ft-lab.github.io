@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script>
+
+function doWebVR (url)
+{
+	location.href = "./show_webvr.html?image=" + url;
+}
+
+function doWebVR180 (url)
+{
+	location.href = "./show_webvr180_sbs.html?image=" + url;
+}
+
+function doWebVR180Movie (url)
+{
+	location.href = "./show_webvr180_sbs_movie.html?image=" + url;
+}
+
+</script>
+
+<title>GoPro HERO 7 SilverでVR180を作る</title>
+</head>
+
+<body class="l_white">
+	<h2>GoPro HERO 7 SilverでVR180を作る</h2>
+	<div align="right">2019/01/15 Update.</div>
+	<hr />
+
+	Mirage CameraでのVR180静止画とGoPro HERO 7 SilverでVR180を作った場合の比較。<br>
+	下記のサムネイルをクリックすると、WebVRの画面が表示されます。<br>
+	
+	<h3 class="section">Mirage Camera</h3>
+	<div align="right">2019/01/15 Update.</div>
+	<div class="indent1">
+		3016 x 3016 pixelのVR180静止画を4096 x 2048のSBSに配置したもの。<br><br>
+
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/GoPro/vr180_sbs_4096x2048_miragecamera_01_thumb.jpg" onClick="doWebVR180('images/GoPro/vr180_sbs_4096x2048_miragecamera_01.jpg');" /><br>
+		<a href="./images/GoPro/vr180_sbs_4096x2048_miragecamera_01.jpg" download="vr180_sbs_4096x2048_miragecamera_01.jpg">Download</a>
+		<br><br>
+
+		<img src="./images/GoPro/vr180_sbs_4096x2048_miragecamera_02_thumb.jpg" onClick="doWebVR180('images/GoPro/vr180_sbs_4096x2048_miragecamera_02.jpg');" /><br>
+		<a href="./images/GoPro/vr180_sbs_4096x2048_miragecamera_02.jpg" download="vr180_sbs_4096x2048_miragecamera_02.jpg">Download</a>
+		<br><br>
+	</div>
+
+	<h3 class="section">GoPro</h3>
+	<div align="right">2019/01/15 Update.</div>
+	<div class="indent1">
+		3648 x 2736 pixelの広角を2枚撮影し、ゆがみ加工してVR180にしたもの。<br><br>
+
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/GoPro/vr180_sbs_4096x2048_gopro_01_thumb.jpg" onClick="doWebVR180('images/GoPro/vr180_sbs_4096x2048_gopro_01.jpg');" /><br>
+		<a href="./images/GoPro/vr180_sbs_4096x2048_gopro_01.jpg" download="vr180_sbs_4096x2048_gopro_01.jpg">Download</a>
+		<br><br>
+
+		<img src="./images/GoPro/vr180_sbs_4096x2048_gopro_02_thumb.jpg" onClick="doWebVR180('images/GoPro/vr180_sbs_4096x2048_gopro_02.jpg');" /><br>
+		<a href="./images/GoPro/vr180_sbs_4096x2048_gopro_02.jpg" download="vr180_sbs_4096x2048_gopro_02.jpg">Download</a>
+		<br><br>
+	</div>
+
+
+	<hr />
+</body>
+</html>
