@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script>
+
+function doWebVR (url)
+{
+	location.href = "./show_webvr.html?image=" + url;
+}
+
+function doWebVR180 (url)
+{
+	location.href = "./show_webvr180_sbs.html?image=" + url;
+}
+
+function doWebVR180Movie (url)
+{
+	location.href = "./show_webvr180_sbs_movie.html?image=" + url;
+}
+
+</script>
+
+<title>Shade3DでVR180を作る</title>
+</head>
+
+<body class="l_white">
+	<h2>Shade3DでVR180を作る</h2>
+	<div align="right">2019/02/09 Update.</div>
+	<hr />
+
+	Shade3DでVR180のレンダリングを行いました。<br>
+	下記のサムネイルをクリックすると、WebVRの画面が表示されます。<br>
+	
+	<h3 class="section">Mirage Camera</h3>
+	<div align="right">2019/02/09 Update.</div>
+	<div class="indent1">
+		2048 x 2048 pixelのVR180静止画を4096 x 2048のSBSに配置したもの。<br><br>
+
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/Shade3D/shade3d_vr180_2_20190208_thumb.jpg" onClick="doWebVR180('images/Shade3D/shade3d_vr180_2_20190208.jpg');" /><br>
+		<a href="./images/Shade3D/shade3d_vr180_2_20190208.jpg" download="shade3d_vr180_2_20190208.jpg">Download</a>
+		<br><br>
+	</div>
+
+	<hr />
+</body>
+</html>
