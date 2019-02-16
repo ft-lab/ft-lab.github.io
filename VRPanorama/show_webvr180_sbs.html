@@ -38,6 +38,7 @@
 			var m_backgroundRadius;
 			var m_sphere;
 			var m_imageURL = "images/my_room_scene/Unity_my_SBS_180_8192x4096.jpg";
+			var m_canvasScale = 1.0;		// canvasのサイズ（デフォルト1024で1.0）.
 
 			var m_glTFURL = "objects/halfSphere_vr180.glb";
 			var m_glTFObject = null;
@@ -47,10 +48,10 @@
 
 			function init() {
 				var container = document.getElementById( 'container' );
-
 				m_backgroundRadius = 1000.0;
 
 				// URLより、画像名を取得 (image=images/xxxx.pngのように入っている).
+				// canvasscale=1.0などで、canvasのスケール値.
 				var url = location.search.substring(1);
 				var str = url.split('&');
 				if (str.length > 0) {
@@ -58,6 +59,11 @@
 					if (str2.length == 2) {
 						if (str2[0] == 'image') {
 							m_imageURL = str2[1];
+						}
+						if (str2[0] == 'canvasscale') {
+							if (str2[1] != "") {
+								m_canvasScale = parseFloat(str2[1]);
+							}
 						}
 					}
 				}
@@ -74,7 +80,7 @@
 
 				renderer = new THREE.WebGLRenderer({ antialias: true });
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( parseInt(window.innerWidth * m_canvasScale), parseInt(window.innerHeight * m_canvasScale));
 				renderer.vr.enabled = true;
 				container.appendChild( renderer.domElement );
 
