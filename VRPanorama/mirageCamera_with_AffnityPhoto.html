@@ -10,9 +10,9 @@ function doWebVR (url)
 	location.href = "./show_webvr.html?image=" + url;
 }
 
-function doWebVR180 (url)
+function doWebVR180 (url, scale)
 {
-	location.href = "./show_webvr180_sbs.html?image=" + url + "&canvasscale=1.2";
+	location.href = "./show_webvr180_sbs.html?image=" + url + "&canvasscale=" + scale;
 }
 
 function doWebVR180Movie (url)
@@ -27,7 +27,7 @@ function doWebVR180Movie (url)
 
 <body class="l_white">
 	<h2>VR180 : MirageCameraの画像をAffinity Photoで加工</h2>
-	<div align="right">2019/02/11 Update.</div>
+	<div align="right">2019/02/16 Update.</div>
 	<hr />
 
 	Mirage Cameraで撮影したVR180静止画(片目3K解像度)をVR180 Creatorで360パノラマに変換、<br>
@@ -45,8 +45,27 @@ function doWebVR180Movie (url)
 	<div class="indent1">
 		解像度 : 6032 x 3016 (SBS)。<br>
 		以下をクリックするとWebVR表示になります。<br>
-		<img src="./images/wonfes2019_winter/wonfes_2019_winter_turret_kun_vr180_sbs_thumb.jpg" onClick="doWebVR180('images/wonfes2019_winter/wonfes_2019_winter_turret_kun_vr180_sbs.jpg');" /><br>
+		<img src="./images/wonfes2019_winter/wonfes_2019_winter_turret_kun_vr180_sbs_thumb.jpg" onClick="doWebVR180('images/wonfes2019_winter/wonfes_2019_winter_turret_kun_vr180_sbs.jpg',1.2);" /><br>
 		<a href="./images/wonfes2019_winter/wonfes_2019_winter_turret_kun_vr180_sbs.jpg" download="wonfes_2019_winter_turret_kun_vr180_sbs.jpg">Download</a>
+		<br><br>
+	</div>
+
+	<h3 class="section">港区立郷土歴史館</h3>
+	<div align="right">2019/02/16 Update.</div>
+	廊下と講堂です。<br>
+	色合いはMirage Cameraの撮影のままで問題なさそうだったため、シャープネスの調整だけ行いました。<br>
+	<div class="indent1">
+		解像度 : 6032 x 3016 (SBS)。<br>
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/minatoku/minatoku_01_vr180_sbs_thumb.jpg" onClick="doWebVR180('images/minatoku/minatoku_01_vr180_sbs.jpg',1.0);" /><br>
+		<a href="./images/minatoku/minatoku_01_vr180_sbs.jpg" download="minatoku_01_vr180_sbs.jpg">Download</a>
+		<br><br>
+	</div>
+	<div class="indent1">
+		解像度 : 6032 x 3016 (SBS)。<br>
+		以下をクリックするとWebVR表示になります。<br>
+		<img src="./images/minatoku/minatoku_02_vr180_sbs_thumb.jpg" onClick="doWebVR180('images/minatoku/minatoku_02_vr180_sbs.jpg',1.0);" /><br>
+		<a href="./images/minatoku/minatoku_02_vr180_sbs.jpg" download="minatoku_02_vr180_sbs.jpg">Download</a>
 		<br><br>
 	</div>
 
