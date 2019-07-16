@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>VR180の全画面表示のテスト用</title>
+
+<script>
+	init();
+
+	function doFullScreen (targetName) {
+		var target = document.getElementById(targetName);
+
+		// 要素を表示.
+		target.style.display = "block";
+
+		if (target.webkitRequestFullScreen) {
+			target.webkitRequestFullScreen();
+		} else if (target.mozRequestFullScreen) {
+			target.mozRequestFullScreen();
+		} else if (target.requestFullscreen) {
+			target.requestFullscreen();
+		}
+	}
+
+	function init () {
+		// フルスクリーンのイベントを割り当て.
+		document.addEventListener("webkitfullscreenchange", OnFullScreenEvent, false);
+		document.addEventListener("mozfullscreenchange", OnFullScreenEvent, false);
+		document.addEventListener("fullscreenchange", OnFullScreenEvent, false);	
+	}
+
+	/**
+	 * フルスクリーンイベントの受け取り.
+	 */
+	function OnFullScreenEvent () {
+		if ((document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+			(document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+			(document.fullScreenElement && document.fullScreenElement !== null)) {
+			
+			// フルスクリーンの実行時に呼ばれる.
+
+		} else {
+			// フルスクリーンの終了時に呼ばれる.
+			{
+				var target = document.getElementById("img00");
+				target.style.display = "none";
+			}
+		}
+	}
+
+</script>
+</head>
+
+<body class="l_white">
+	<h2>VR180の全画面表示のテスト用</h2>
+	<div align="right">2019/07/16 Update.</div>
+	<hr />
+
+	<h3 class="section">テスト</h3>
+	<div align="right">2019/07/16 Update.</div>
+	<div class="indent1">
+		全画面表示のテスト。<br>
+		クリックするとフルスクリーン表示します。<br>
+
+		<img src="./images/IMG_20190715_152719_00_062.jpg" id="img00" style="display: none;" />
+		<img src="./images/IMG_20190715_152719_00_062_thumb.jpg" onClick="doFullScreen('img00');" />
+	</div>
+	<hr />
+</body>
+</html>
+
