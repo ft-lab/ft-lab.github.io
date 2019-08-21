@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>VR180でのズーム実験</title>
+
+<script>
+	function doWebVR180 (url)
+	{
+		location.href = "../VRPanorama/show_webvr180_sbs.html?image=" + url;
+	}
+</script>
+
+</head>
+
+<body class="l_white">
+	<h2>VR180でのズーム実験</h2>
+	<div align="right">2019/08/21 Update.</div>
+	<hr />
+
+	<h3 class="section">VR180でのズーム実験</h3>
+	<div align="right">2019/08/21 Update.</div>
+	<div class="indent1">
+		Insta360 EVOでHDR撮影しました。<br>
+		下の画像をクリックすると、WebVR表示になります。<br>
+
+		↓ 通常の撮影。<br>
+		<img src="./images/IMG_20190821_131222_01_default_thumb.jpg" onClick="doWebVR180('./images/IMG_20190821_131222_01_default.jpg');" /><br><br>
+
+		↓ 6.4倍にスケーリング。<br>
+		<img src="./images/IMG_20190821_131222_02_x64_thumb.jpg" onClick="doWebVR180('./images/IMG_20190821_131222_02_x64.jpg');" /><br><br>
+	</div>
+	<hr />
+</body>
+</html>
+
