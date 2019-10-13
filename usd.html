@@ -79,8 +79,51 @@
 					<br>
 					iOS12 : NG<br>
 					iOS13 : OK<br>
+					<br>
+					iOS12はUsdTransform2dに未対応。<br>
 				</td>
 				<td>テクスチャの反復割り当て(USDのUsdTransform2dの検証)。<br>
+				</td>
+			</tr>
+			<tr>
+				<td>leaf<br>2019/10/13</td>
+				<td><a href="./usd/leaf/leaf.shd">leaf.shd</a></td>
+				<td>
+					<a href="./usd/leaf/leaf_usd.zip">leaf_usd.zip (338KB)</a>
+				</td>
+				<td>
+					leaf.usdz (343KB)<br>
+					<a rel="ar" href="./usd/leaf/leaf.usdz">
+						<img src="./usd/leaf/leaf.jpg">
+					</a>
+					<br>
+					iOS12 : NG<br>
+					iOS13 : NG<br>
+					<br>
+					iOS12では、pngテクスチャのAlphaを明示して参照できない。<br>
+					iOS12/iOS13では影が透過されない、cutoutされない。<br>
+				</td>
+				<td>透明度の割り当て (Opacityの検証)<br>
+					ピクセル透過の表現。<br>
+				</td>
+			</tr>
+			<tr>
+				<td>facegroup<br>2019/10/13</td>
+				<td><a href="./usd/facegroup/facegroup.shd">facegroup.shd</a></td>
+				<td>
+					<a href="./usd/facegroup/facegroup_usd.zip">facegroup_usd.zip (57KB)</a>
+				</td>
+				<td>
+					facegroup.usdz (80KB)<br>
+					<a rel="ar" href="./usd/facegroup/facegroup.usdz">
+						<img src="./usd/facegroup/facegroup.jpg">
+					</a>
+					<br>
+					iOS12 : OK<br>
+					iOS13 : OK<br>
+					<br>
+				</td>
+				<td>Shade3Dでのフェイスグループの検証 （1Meshに複数マテリアルを割り当て）。<br>
 				</td>
 			</tr>
 
@@ -123,6 +166,7 @@
 				</td>
 				<td>茶碗の形状。<br>
 					1テクスチャにR:Occlusion/G:Roughness/B:Metallicを割り当てたPBRマテリアル。<br>
+					テクスチャは、Substance Painterで作成してglTF出力したものです。<br>
 				</td>
 			</tr>
 		</table>
