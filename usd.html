@@ -25,9 +25,25 @@
 				<th>Shade3D</th>
 				<th>usda + Texture</th>
 				<th>usdz</th>
-				<th>iOS12</th>
-				<th>iOS13</th>
 				<th>説明</th>
+			</tr>
+			<tr>
+				<td>PBRMaterialTest<br>2019/10/13</td>
+				<td><a href="./usd/PBRMaterialTest/PBRMaterialTest.shd">PBRMaterialTest.shd</a></td>
+				<td>
+					<a href="./usd/PBRMaterialTest/pbrMaterialTest_usd.zip">pbrMaterialTest_usd.zip (76KB)</a>
+				</td>
+				<td>
+					pbrMaterialTest.usdz (64KB)<br>
+					<a rel="ar" href="./usd/PBRMaterialTest/pbrMaterialTest.usdz">
+						<img src="./usd/PBRMaterialTest/pbrMaterialTest.jpg">
+					</a>
+					<br>
+					iOS12 : OK<br>
+					iOS13 : OK<br>
+				</td>
+				<td>PBRマテリアルの比較。<br>
+				</td>
 			</tr>
 			<tr>
 				<td>Apple<br>2019/10/13</td>
@@ -40,13 +56,15 @@
 					<a rel="ar" href="./usd/apple/apple.usdz">
 						<img src="./usd/apple/apple.jpg">
 					</a>
+					<br>
+					iOS12 : OK (*1)<br>
+					iOS13 : OK (*1)<br>
+					<br>
+					(*1) iOS12/13ではDoubleSidedは反映されない。<br>
 				</td>
-				<td>OK (*1)</td>
-				<td>OK (*1)</td>
 				<td>リンゴの形状。<br>
 					1Meshに1Material。<br>
 					DoubleSidedを使用。<br>
-					(*1) iOS12/13ではDoubleSidedは反映されない。<br>
 				</td>
 			</tr>
 			<tr>
@@ -60,9 +78,10 @@
 					<a rel="ar" href="./usd/cyawan/cyawan.usdz">
 						<img src="./usd/cyawan/cyawan.jpg">
 					</a>
+					<br>
+					iOS12 : NG<br>
+					iOS13 : OK<br>
 				</td>
-				<td>NG</td>
-				<td>OK</td>
 				<td>茶碗の形状。<br>
 					1テクスチャにR:Occlusion/G:Roughness/B:Metallicを割り当てたPBRマテリアル。<br>
 				</td>
