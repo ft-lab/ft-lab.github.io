@@ -8,7 +8,7 @@
 
 <body class="l_white">
 	<h2>USDファイル置き場</h2>
-	<div align="right">2019/10/13 Update.</div>
+	<div align="right">2019/10/18 Update.</div>
 	<hr />
 
 	<h3 class="section">USDファイル</h3>
@@ -211,6 +211,29 @@
 				<td>茶碗の形状。<br>
 					1テクスチャにR:Occlusion/G:Roughness/B:Metallicを割り当てたPBRマテリアル。<br>
 					テクスチャは、Substance Painterで作成してglTF出力したものです。<br>
+				</td>
+			</tr>
+			<tr>
+				<td>subdiv_00<br>2019/10/18</td>
+				<td><a href="./usd/subdivision/subdiv_00.shd">subdiv_00.shd</a></td>
+				<td>
+					<a href="./usd/subdivision/subdiv_00_usd.zip">subdiv_00_usd.zip (38KB)</a>
+				</td>
+				<td>
+					subdiv_00.usdz (54KB)<br>
+					<a rel="ar" href="./usd/subdivision/subdiv_00.usdz">
+						<img src="./usd/subdivision/subdiv_00.jpg">
+					</a>
+					<br>
+					iOS12 : NG<br>
+					iOS13 : NG<br>
+					<br>
+					iOS12/13ともに、subdivisionの表示に対応していない。
+				</td>
+				<td>subdivisionのテスト。Meshで subdivisionScheme = "catmullClark" を指定。<br>
+					USD Exporterでのエクスポート時に「Subdivison」チェックボックスをOnにして出力した。<br>
+					usdviewでComplexity-Very Highにすると以下のようになる。これが理想。<br>
+					<img src="./usd/subdivision/subdiv_00_usdview.jpg" />
 				</td>
 			</tr>
 		</table>
