@@ -236,6 +236,49 @@
 					<img src="./usd/subdivision/subdiv_00_usdview.jpg" />
 				</td>
 			</tr>
+			<tr>
+				<td>ido_01<br>2019/10/18</td>
+				<td><a href="./usd/ido/ido_01.shd">ido_01.shd</a></td>
+				<td>
+					<a href="./usd/ido/ido_01_usd.zip">ido_01_usd.zip (341KB)</a>
+				</td>
+				<td>
+					ido_01.usdz (404KB)<br>
+					<a rel="ar" href="./usd/ido/ido_01.usdz">
+						<img src="./usd/ido/ido_01.jpg">
+					</a>
+					<br>
+					iOS12 : NG<br>
+					iOS13 : NG<br>
+					<br>
+					iOS12/13ともに、UV2の割り当てに対応していない。
+				</td>
+				<td>Multiple UVsのテスト。UV2にOcclusionを割り当てている。<br>
+					usdviewでは以下のようになる。これが理想。<br>
+					<img src="./usd/ido/ido_01_usdview.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td>ido_02<br>2019/10/18</td>
+				<td><a href="./usd/ido/ido_02.shd">ido_02.shd</a></td>
+				<td>
+					<a href="./usd/ido/ido_02_usd.zip">ido_02_usd.zip (399KB)</a>
+				</td>
+				<td>
+					ido_02.usdz (462KB)<br>
+					<a rel="ar" href="./usd/ido/ido_02.usdz">
+						<img src="./usd/ido/ido_02.jpg">
+					</a>
+					<br>
+					iOS12 : OK<br>
+					iOS13 : OK<br>
+					<br>
+				</td>
+				<td>Meshを複製してかぶせる形でUV2を使ったOcclusionを再現。<br>
+					ido_01でのUV2を分離し、井戸を少し膨らませた（面ベベルで2mmオフセット）メッシュとして複製。<br>
+					膨らませたメッシュにOcclusionを透明度マップした(USDに渡す際はOpacityになる)。<br>
+				</td>
+			</tr>
 		</table>
 	</div>
 
