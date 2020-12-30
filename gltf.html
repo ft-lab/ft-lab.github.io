@@ -8,7 +8,7 @@
 
 <body class="l_white">
 	<h2>ft-lab プロジェクトファイル置き場</h2>
-	<div align="right">2020/12/26 Update.</div>
+	<div align="right">2020/12/30 Update.</div>
 	<hr />
 
 	<h3 class="section">glTFファイル</h3>
@@ -357,7 +357,7 @@
 			</tr>
 			<tr>
 				<td>gltfTest_PBRMaterial<br>2020/12/26</td>
-				<td>※ DOKI for Shade3D ( <a href="http://www.ft-lab.ne.jp/shade3d/DOKI/">http://www.ft-lab.ne.jp/shade3d/DOKI/</a> ) の設定を行っているシーンのため、<br>整理してからアップ予定です。</td>
+				<td>※ DOKI for Shade3D<br> ( <a href="http://www.ft-lab.ne.jp/shade3d/DOKI/">http://www.ft-lab.ne.jp/shade3d/DOKI/</a> ) の設定を行っているシーンのため、<br>整理してからアップ予定です。</td>
 				<td>
 					<a href="./gltf/pbr_material/gltfTest_PBRMaterial.glb">gltfTest_PBRMaterial.glb (1.05MB)</a><br>
 				</td>
@@ -380,7 +380,32 @@
 					詳しい解説はブログの「<a href="https://ft-lab.jp/blog_3dcg/?p=830">glTFのPBR検証用のサンプルglb</a>」をご参照くださいませ。<br>
 				</td>
 			</tr>
+			<tr>
+				<td>cabinet_AR<br>2020/12/30</td>
+				<td>
+					<a href="./gltf/cabinet/cabinet_AR.shd">cabinet_AR.shd</a><br><br>
+					※ DOKI for Shade3D<br>( <a href="http://www.ft-lab.ne.jp/shade3d/DOKI/">http://www.ft-lab.ne.jp/shade3d/DOKI/</a> ) の設定を行っているシーンです。<br>
+					Shade3Dの標準レンダリングでは<br>正しくレンダリングできません。<br><br>
+					glTFエクスポート時は「テクスチャを加工せずにベイク」を<br>Onにして出力してください。<br>
+				</td>
+				<td>
+					<a href="./gltf/cabinet/cabinet_AR.glb">cabinet_AR.glb (639KB)</a><br>
+				</td>
+				<td>PBRマテリアル半透明の検証用です。<br>
+					ガラス部の半透明はBaseColorのAlpha値として格納されますが、<br>
+					透明に近づくにつれて映り込みが弱まるという特性があります。<br>
+					そのため、不透明(Opacity)テクスチャは0.5に抑えるようにしています。<br><br>
 
+					検証項目は以下。<br>
+					<ul>
+						<li>Double Sided</li>
+						<li>Alpha Blend</li>
+						<li>Occlusion (ARで使えるように強調)</li>
+						<li>アニメーション</li>
+					</ul>
+					<img src="images/gltf/cabinet_AR.jpg" /><br>
+				</td>
+			</tr>
 		</table>
 	</div>
 
