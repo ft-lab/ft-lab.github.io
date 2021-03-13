@@ -2,6 +2,7 @@
     <head>
         <title>ARコンテンツのサンプル (Android/iOS/iPadOS共用)</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>        
     </head>
     <body>
@@ -10,13 +11,13 @@
         <hr />
         以下の画像をタップするとARできます。<br>
         <model-viewer
-        ar
-        src="./cyawan.glb"
-        ios-src="./cyawan.usdz"
-        alt="Cyawan"
-        auto-rotate
-        camera-controls
-      ></model-viewer>
+          ar
+          src="./cyawan.glb"
+          ios-src="./cyawan.usdz"
+          alt="Cyawan"
+          auto-rotate
+          camera-controls
+        ></model-viewer>
         <br>
         モデリングはShade3Dで行い、glTF Converter/USD Exporterプラグインで出力しました。<br>
         <hr />
