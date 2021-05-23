@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>Panorama180 Renderの360度パノラマのテスト</title>
+
+<script>
+    var m_targetName = "";
+
+    init();
+    
+	function doFullScreen (targetName) {
+		var target = document.getElementById(targetName);
+        m_targetName = targetName;
+
+		// 要素を表示.
+		target.style.display = "block";
+
+		if (target.webkitRequestFullScreen) {
+			target.webkitRequestFullScreen();
+		} else if (target.mozRequestFullScreen) {
+			target.mozRequestFullScreen();
+		} else if (target.requestFullscreen) {
+			target.requestFullscreen();
+		}
+	}
+
+	function init () {
+		// フルスクリーンのイベントを割り当て.
+		document.addEventListener("webkitfullscreenchange", OnFullScreenEvent, false);
+		document.addEventListener("mozfullscreenchange", OnFullScreenEvent, false);
+		document.addEventListener("fullscreenchange", OnFullScreenEvent, false);	
+	}
+
+	/**
+	 * フルスクリーンイベントの受け取り.
+	 */
+	function OnFullScreenEvent () {
+		if ((document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+			(document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+			(document.fullScreenElement && document.fullScreenElement !== null)) {
+			
+			// フルスクリーンの実行時に呼ばれる.
+
+		} else {
+			// フルスクリーンの終了時に呼ばれる.
+			{
+				var target = document.getElementById(m_targetName);
+				target.style.display = "none";
+			}
+		}
+	}
+
+</script>
+</head>
+
+<body class="l_white">
+	<h2>Panorama180 Renderの360度パノラマのテスト</h2>
+	<div align="right">2021/05/23 Update.</div>
+	<hr />
+
+	<h3 class="section">Unity 2020.3 HDRP</h3>
+	<div align="right">2021/05/23 Update.</div>
+	<div class="indent1">
+		360度パノラマの全画面表示のテスト。<br>
+		クリックするとフルスクリーン表示します。<br>
+
+		<img src="./images/panorama360_unity2020_HDRP_4096x4096.jpg" id="img00" style="display: none;" />
+		<img src="./images/panorama360_unity2020_HDRP_4096x4096_thumb.jpg" onClick="doFullScreen('img00');" />
+	</div>
+	<hr />
+</body>
+</html>
+
