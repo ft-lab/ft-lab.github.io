@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>Panorama180 Renderの360度パノラマのテスト</title>
+
+<script src="js/poxp_all.js?20200105"></script>
+<script src="js/v360_embed.js"></script>
+<link rel="stylesheet" type="text/css" href="css/v360_embed.css">
+<style type="text/css">
+div.v360 {
+	width:400px ;
+	height:200px ;
+}
+</style>
+
+</head>
+
+<body class="l_white">
+	<h2>Panorama180 Renderの360度パノラマのテスト</h2>
+	<div align="right">2021/05/23 Update.</div>
+	<hr />
+	WebGLの360度パノラマ＋ステレオビュワーとして「<a href="https://github.com/wakufactory/vr360">https://github.com/wakufactory/vr360</a>」を使用しています。<br>
+
+	<h3 class="section">Intel OSPRay</h3>
+	<div align="right">2021/05/23 Update.</div>
+	<div class="indent1">
+		クリックするとVR表示します。<br>
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Intel OSPRay (v.2.3.0)</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>4096 x 4096 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>Panorama 360</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+
+		<div class=poxe data-src="./images/ospray_panorama360_4096x4096.jpg" data-mode="1"><img class=thumb src="./images/ospray_panorama360_4096x4096_thumb.jpg"></div><br>
+		上下を向いた場合、地面の視差がなくなって凹んだように見えています。<br>
+		オフラインレンダラが出力する多くの360度パノラマ+ステレオは、このような表現が多いです。<br>
+	</div>
+	<hr />
+
+	<h3 class="section">Panorama180 Render in Unity 2020.3 HDRP</h3>
+	<div align="right">2021/05/23 Update.</div>
+	<div class="indent1">
+		Panorama180 Renderの次バージョン（360度パノラマ対応したもの）で出力しています。<br>
+		クリックするとVR表示します。<br>
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Unity 2020.3 (HDRP)<br>Panorama180 Renderで出力</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>4096 x 4096 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>Panorama 360</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+
+		<div class=poxe data-src="./images/panorama360_unity2020_HDRP_4096x4096.jpg" data-mode="1"><img class=thumb src="./images/panorama360_unity2020_HDRP_4096x4096_thumb.jpg"></div><br>
+		極力、地面や空の視差による距離感を保つようにしています。<br>
+		境界部分が荒くなる（矛盾）とのトレードオフですが、接地感はこのほうが出るかなと思います。<br>
+	</div>
+	<hr />
+</body>
+</html>
+
