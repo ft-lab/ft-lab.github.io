@@ -16,17 +16,67 @@ div.v360 {
 }
 </style>
 
+<script>
+	var m_targetName = "";
+	init();
+
+	function doFullScreen (targetName) {
+		var target = document.getElementById(targetName);
+		m_targetName = targetName;
+
+		// 要素を表示.
+		target.style.display = "block";
+
+		if (target.webkitRequestFullScreen) {
+			target.webkitRequestFullScreen();
+		} else if (target.mozRequestFullScreen) {
+			target.mozRequestFullScreen();
+		} else if (target.requestFullscreen) {
+			target.requestFullscreen();
+		}
+	}
+
+	function init () {
+		// フルスクリーンのイベントを割り当て.
+		document.addEventListener("webkitfullscreenchange", OnFullScreenEvent, false);
+		document.addEventListener("mozfullscreenchange", OnFullScreenEvent, false);
+		document.addEventListener("fullscreenchange", OnFullScreenEvent, false);	
+	}
+
+	/**
+	 * フルスクリーンイベントの受け取り.
+	 */
+	function OnFullScreenEvent () {
+		if ((document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+			(document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+			(document.fullScreenElement && document.fullScreenElement !== null)) {
+			
+			// フルスクリーンの実行時に呼ばれる.
+
+		} else {
+			// フルスクリーンの終了時に呼ばれる.
+			{
+				var target = document.getElementById(m_targetName);
+				target.style.display = "none";
+			}
+		}
+	}
+
+</script>
+
 </head>
 
 <body class="l_white">
 	<h2>Panorama180 Renderの360度パノラマのテスト</h2>
-	<div align="right">2021/05/23 Update.</div>
+	<div align="right">2021/05/23 - 2021/05/24 Update.</div>
 	<hr />
-	WebGLの360度パノラマ＋ステレオビュワーとして「<a href="https://github.com/wakufactory/vr360">https://github.com/wakufactory/vr360</a>」を使用しています。<br>
-	読み込みに失敗する場合は、ページを再読み込みするようにしてくださいませ。<br>
+	Oculus Quest2の場合は、Oculus Browserでサムネイルをクリックするとフルスクリーン表示になります。<br>
+	Oculus Quest2のブラウザ上で正しく表示できるようにするため、画像サイズを16:9のアスペクト比にしました。<br>
+	「VR 360」-「トップ ボトム」を選択すると立体視できます。<br>
+	VR表示時に後ろを向くと、縦方向にうっすらと境界線が見えますがこれは原因不明です。<br>
 
 	<h3 class="section">Intel OSPRay</h3>
-	<div align="right">2021/05/23 Update.</div>
+	<div align="right">2021/05/24 Update.</div>
 	<div class="indent1">
 		クリックするとVR表示します。<br>
 		<table border="0">
@@ -48,14 +98,17 @@ div.v360 {
 			</tr>
 		</table>
 
-		<div class=poxe data-src="./images/ospray_panorama360_4096x4096.jpg" data-mode="1"><img class=thumb src="./images/ospray_panorama360_4096x4096_thumb.jpg"></div><br>
+		ダウンロード (4096 x 4096 pixel) : <a href="./images/ospray_panorama360_4096x4096.jpg">ospray_panorama360_4096x4096.jpg</a><br>
+		<img src="./images/ospray_panorama360_4096x2304.jpg" id="img00" style="display: none;" /><br>
+		<img src="./images/ospray_panorama360_4096x4096_thumb.jpg" onClick="doFullScreen('img00');" /><br>
+
 		上下を向いた場合、地面の視差がなくなって凹んだように見えています。<br>
 		オフラインレンダラが出力する多くの360度パノラマ+ステレオは、このような表現が多いです。<br>
 	</div>
 	<hr />
 
 	<h3 class="section">Panorama180 Render in Unity 2020.3 HDRP</h3>
-	<div align="right">2021/05/23 Update.</div>
+	<div align="right">2021/05/24 Update.</div>
 	<div class="indent1">
 		Panorama180 Renderの次バージョン（360度パノラマ対応したもの）で出力しています。<br>
 		クリックするとVR表示します。<br>
@@ -78,13 +131,50 @@ div.v360 {
 			</tr>
 		</table>
 
-		<div class=poxe data-src="./images/panorama360_unity2020_HDRP_4096x4096.jpg" data-mode="1"><img class=thumb src="./images/panorama360_unity2020_HDRP_4096x4096_thumb.jpg"></div><br>
-		<div class=poxe data-src="./images/panorama360_unity2020_HDRP_02_4096x4096.jpg" data-mode="1"><img class=thumb src="./images/panorama360_unity2020_HDRP_02_4096x4096_thumb.jpg"></div><br>
+		ダウンロード (4096 x 4096 pixel) : <a href="./images/panorama360_unity2020_HDRP_4096x4096.jpg">panorama360_unity2020_HDRP_4096x4096.jpg</a><br>
+		<img src="./images/panorama360_unity2020_HDRP_4096x2304.jpg" id="img01" style="display: none;" /><br>
+		<img src="./images/panorama360_unity2020_HDRP_4096x4096_thumb.jpg" onClick="doFullScreen('img01');" /><br><br>
+		
+		ダウンロード (4096 x 4096 pixel) : <a href="./images/panorama360_unity2020_HDRP_02_4096x4096.jpg">panorama360_unity2020_HDRP_02_4096x4096.jpg</a><br>
+		<img src="./images/panorama360_unity2020_HDRP_02_4096x2304.jpg" id="img02" style="display: none;" /><br>
+		<img src="./images/panorama360_unity2020_HDRP_02_4096x4096_thumb.jpg" onClick="doFullScreen('img02');" /><br><br>
 
 		極力、地面や空の視差による距離感を保つようにしています。<br>
 		境界部分が荒くなる（矛盾）とのトレードオフですが、接地感はこのほうが出るかなと思います。<br>
 	</div>
 	<hr />
+	<h3 class="section">Panorama180 Render in Unity 2020.3 URP</h3>
+	<div align="right">2021/05/24 Update.</div>
+	<div class="indent1">
+		Panorama180 Renderの次バージョン（360度パノラマ対応したもの）で出力しています。<br>
+		クリックするとVR表示します。<br>
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Unity 2020.3 (URP)<br>Panorama180 Renderで出力</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>4096 x 4096 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>Panorama 360</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+
+		ダウンロード (4096 x 4096 pixel) : <a href="./images/panorama360_unity2020_URP_4096x4096.jpg">panorama360_unity2020_URP_4096x4096.jpg</a><br>
+		<img src="./images/panorama360_unity2020_URP_4096x2304.jpg" id="img_unity_urp_01" style="display: none;" /><br>
+		<img src="./images/panorama360_unity2020_URP_4096x4096_thumb.jpg" onClick="doFullScreen('img_unity_urp_01');" /><br><br>
+		
+		極力、地面や空の視差による距離感を保つようにしています。<br>
+	</div>
+	<hr />
+
 </body>
 </html>
 
