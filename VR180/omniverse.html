@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;  charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>OmniverseのレンダリングをVR180静止画として見る</title>
+
+<script>
+	function doWebVR180 (url)
+	{
+		location.href = "../VRPanorama/show_webvr180_sbs.html?image=" + url;
+	}
+</script>
+
+</head>
+
+<body class="l_white">
+	<h2>OmniverseのレンダリングをVR180静止画として見る</h2>
+	<div align="right">2021/10/17 Update.</div>
+	<hr />
+
+	<h3 class="section">Omniverse CreateでのVR180テスト</h3>
+	<div align="right">2021/10/17 Update.</div>
+	<div class="indent1">
+		下の画像をクリックすると、WebXR表示になります。<br>
+		Oculus Questの場合はOculus Browserからアクセスできます。<br>
+		Omniverse Create(2021.3.6)で4K解像度のパノラマレンダリングで180度分抜き出し、視差を考慮してSBSで並べました。<br>
+
+		<table border="0">
+			<tr>
+				<th>Rendering</th>
+				<td>Omniverse Create (2021.3.6)</td>
+			</tr>
+			<tr>
+				<th>Resolution</th>
+				<td>3840 x 2160 pixel</td>
+			</tr>
+			<tr>
+				<th>Panorama</th>
+				<td>VR180 / Side by Side</td>
+			</tr>
+			<tr>
+				<th>IPD</th>
+				<td>64mm</td>
+			</tr>
+		</table>
+	
+		<img src="./images/omniverse_vr180_01_20211017_thumb.jpg" onClick="doWebVR180('./images/omniverse_vr180_01_20211017.jpg');" /><br><br>
+		<img src="./images/omniverse_vr180_02_20211017_thumb.jpg" onClick="doWebVR180('./images/omniverse_vr180_02_20211017.jpg');" /><br>
+	</div>
+	<hr />
+
+</body>
+</html>
+
