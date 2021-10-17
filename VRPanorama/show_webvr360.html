@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Panorama VR View (VR180 SBS)</title>
+		<title>Panorama VR View (VR360)</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<style>
@@ -28,9 +28,9 @@
 		<div id="info">
 		</div>
 
-		<!-- <script src="threejs_r98/build/three.min.js"></script> -->
-		<!-- <script src="threejs_r98/vr/WebVR.js"></script> -->
-		<!-- <script src="./threejs_r128/loaders/GLTFLoader.js"></script> -->		
+		<!-- <script src="threejs_r128/build/three.min.js"></script> -->
+		<!-- <script src="threejs_r128/jsm/webxr/VRButton.js"></script>  -->
+		<!-- <script src="./threejs_r128/loaders/GLTFLoader.js"></script>	-->
 
 		<script type="module">
 			import * as THREE from './threejs_r128/build/three.module.js';
@@ -44,7 +44,7 @@
 			var m_imageURL = "images/gallery/panorama180_studySet_with_postprocessing.jpg";
 			var m_canvasScale = 1.0;		// canvasのサイズ（デフォルト1024で1.0）.
 
-			var m_glTFURL = "./objects/halfSphere_vr180.glb";
+			var m_glTFURL = "./objects/sphere_vr360.glb";
 			var m_glTFObject = null;
 
 			init();
@@ -120,7 +120,7 @@
 			}
 
 			/**
-			 * 背景となる半球をシーンに追加.
+			 * 背景となる球をシーンに追加.
 			 */
 			function setupBackgroundSphere () {
 				// パノラマ画像の読み込み.
@@ -154,6 +154,11 @@
 					mesh.scale.set(scale, scale * -1.0, scale);
 					mesh.material.needsUpdate = true;
 
+					var uvs = mesh.geometry.attributes.uv.array;
+					for (var i = 1; i < uvs.length; i += 2) {
+						uvs[i] = uvs[i] * 0.5 + 0.5;
+					}
+
 					mesh.layers.set( 1 ); // display in left eye only
 					scene.add( mesh );
 				}
@@ -174,8 +179,8 @@
 					mesh.material.needsUpdate = true;
 
 					var uvs = mesh.geometry.attributes.uv.array;
-					for (var i = 0; i < uvs.length; i += 2) {
-						uvs[i] += 0.5;
+					for (var i = 1; i < uvs.length; i += 2) {
+						uvs[i] *= 0.5;
 					}
 
 					mesh.layers.set( 2 ); // display in right eye only
