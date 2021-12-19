@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>茶碗</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>        
+    </head>
+    <body>
+        <h2>茶碗</h2>
+        <div align="right">2021/12/21</div>
+        <hr />
+        glbのみ使用した例。<br>
+        iOS/iPadOSの場合は、glbから自動的にusdzが生成されます。<br>
+        以下の画像をタップするとARできます。<br>
+        <model-viewer
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          src="./cyawan.glb"
+          alt="Cyawan"
+          auto-rotate
+          camera-controls
+        ></model-viewer>
+        <br>
+        <hr />
+    </body>
+</html>
+
